@@ -18,5 +18,10 @@ namespace Certweb
 
             dgvEmployees.DataSource = Database.EmployeeDataAccess.FindAllEmployees();
         }
+
+        private void ActionNovo(object sender, EventArgs e)
+        {
+            new EmployeeRegister().Show();
+        }
     }
 }
