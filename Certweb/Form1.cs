@@ -15,8 +15,8 @@ namespace Certweb
         public Principal()
         {
             InitializeComponent();
-        }
 
-        
+            dgvEmployees.DataSource = Database.EmployeeDataAccess.FindAllEmployees();
+        }
     }
 }
