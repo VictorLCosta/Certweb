@@ -27,5 +27,11 @@ namespace Certweb
         {
             new EmployeeRegister(this).Show();
         }
+
+        private void ActionEditar(object sender, EventArgs e)
+        {
+            int id = (int) dgvEmployees.SelectedRows[0].Cells[0].Value;
+            new EmployeeRegister(this, id).Show();
+        }
     }
 }

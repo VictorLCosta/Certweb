@@ -49,6 +49,35 @@ namespace Certweb.Database
                 return false;
             }
 
-        } 
+        }
+        
+        public static async Task<Employee> GetEmployee(int id)
+        {
+            string sql = "SELECT * FROM Employee WHERE Id = @id";
+
+            SqlCeCommand command = new SqlCeCommand(sql, con);
+
+            command.Parameters.Add("@id", id);
+
+            await con.OpenAsync();
+
+            SqlCeDataReader result = (SqlCeDataReader) await command.ExecuteReaderAsync();
+
+            Employee employee = new Employee();
+            while (await result.ReadAsync())
+            {
+                employee.Id = result.GetInt32(0);
+                employee.Name = result.GetString(1);
+                employee.Email = result.GetString(2);
+                employee.Salary = result.GetDecimal(3);
+                employee.Gender = result.GetString(4);
+                employee.ContractType = result.GetString(5);
+                //employee.RegisterDate = result.GetDateTime(6);
+            }
+
+            con.Close();
+
+            return employee;
+        }
     }
 }
