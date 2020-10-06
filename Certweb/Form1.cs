@@ -15,13 +15,17 @@ namespace Certweb
         public Principal()
         {
             InitializeComponent();
+            UpdateTable();
+        }
 
+        public void UpdateTable()
+        {
             dgvEmployees.DataSource = Database.EmployeeDataAccess.FindAllEmployees();
         }
 
         private void ActionNovo(object sender, EventArgs e)
         {
-            new EmployeeRegister().Show();
+            new EmployeeRegister(this).Show();
         }
     }
 }

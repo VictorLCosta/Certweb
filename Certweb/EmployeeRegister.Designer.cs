@@ -31,7 +31,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSalary = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblErrors = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -74,15 +74,15 @@
             this.lblSalary.TabIndex = 2;
             this.lblSalary.Text = "Salario";
             // 
-            // label6
+            // lblErrors
             // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(209, 324);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
+            this.lblErrors.AutoSize = true;
+            this.lblErrors.ForeColor = System.Drawing.Color.Red;
+            this.lblErrors.Location = new System.Drawing.Point(305, 252);
+            this.lblErrors.Name = "lblErrors";
+            this.lblErrors.Size = new System.Drawing.Size(35, 13);
+            this.lblErrors.TabIndex = 5;
+            this.lblErrors.Text = "label6";
             // 
             // btnSalvar
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblErrors);
             this.Controls.Add(this.lblSalary);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblName);
@@ -224,7 +224,7 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSalary;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblErrors;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEmail;
